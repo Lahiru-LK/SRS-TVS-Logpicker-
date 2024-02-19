@@ -1,5 +1,7 @@
 # SRS TVS Logpicker 🕵️‍♂️📆
 
+![py](https://github.com/Lahiru-LK/SRS-TVS-Logpicker-/assets/104630433/3cba3a09-b88f-4767-8d71-eabdae87b61b)
+
 ## Overall Description 🌐
 
 During work in the simulation lab, system crashes can occur. To simplify the process of sending the TestScenario.xml file and corresponding logfile archive to the support team, the "tvs_logpicker" script is introduced. This standalone Python3 application automates the manual searching and matching of TestScenario files and archive files, making the process more convenient.
