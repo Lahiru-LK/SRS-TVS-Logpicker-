@@ -1,0 +1,4 @@
+INFO SUBSET111 PID (8438) THR (-234857616) src/BaseClient.cpp 127 26 Jun 2020 10:20:40.685 Send SUBSET111 DMI.status2 (from OBU) message!
+Message received (LOGGING.activate (to OBU)) from ITS:
+Activate=1 LogName=282_test.log TYPE=930 NAME=LOGGING.activate (to OBU)
+Message LOGGING.activate (to OBU) has been treated, status=Success

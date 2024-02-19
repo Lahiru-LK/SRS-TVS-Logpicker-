@@ -1,0 +1,61 @@
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office"/>
+  <styles/>
+  <Worksheet ss:Name='Scenario Controller' xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+    <Table>
+      <Row>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>10:33:47.036</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>LOGGING.activate (to OBU)</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>Logging activation (File name '282_test.log')</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>Activate=1 LogName=282_test.log TYPE=930 NAME=LOGGING.activate (to OBU)</Data></Cell>
+      </Row>
+
+      <!-- Additional Rows -->
+      <Row>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>10:49:13.173</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>LOGGING.result (from OBU)</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>Logging result (File name: '284_test.log', Data size: 334, Sequence number: 22, Complete: yes)</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>LogName=284_test.log Data=| Radio TX: 136, Train position report (RBC 7345593) Radio TX 150, End of mission (RBC 7345593) 299365 299947 300008 3 0 0 4 3 1 3 0 0 491 Radio RX: 24, General telegram (RBC 7345593), p(42) Radio TX 156, Terminate a communication session (RBC 7345593) Radio RX 39, Ack communication termination (RBC 7345593) Info Radio connection released | SequenceNumber=22 Complete=1 TYPE=932 NAME=LOGGING.result (from OBU)</Data></Cell>
+        <Cell ss:StyleID='C'><Data ss:Type='String'></Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>10:49:13.175</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>JRU-LOGGING.result (from OBU)</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>JRU logging result (File name: '284_test.jru', Data size: 512, Sequence number: 1, Complete: no)</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>LogName=284_test.jru Data=|| ˆA ˆH Ẵ ^[ H ́ &lt;91&gt; ? ÿ ÿ ÿ ÿ è ˆ@ thg À NE</Data></Cell>
+        <Cell ss:StyleID='C'><Data ss:Type='String'></Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>10:49:13.176</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>JRU-LOGGING.result (from OBU)</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>JRU logging result (File name: '284_test.jru', Data size: 512, Sequence number: 2, Complete: no)</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>LogName=284_test.jru Data=[*F ) * +_,_ - . a ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ ÿ à ˆ@ ˆa @ NÚNA THẢ TIH ^V ¿ ÿ ÿ ÿ ÿ è</Data></Cell>
+        <Cell ss:StyleID='C'><Data ss:Type='String'></Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>10:49:13.178</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>JRU-LOGGING.result (from OBU)</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>JRU logging result (File name: '284_test.jru', Data size: 512, Sequence number: 3, Complete: no)</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>LogName=284_test.jru Data=[^@ ^T ^H ả ^[ H ˆ 9 ¿ ÿ ÿ ÿ ÿ è ˆ@^@^A^H A ^ H ° &lt;86&gt; ? ÿ ÿ ÿ ÿ è ˆ@_A "F</Data></Cell>
+        <Cell ss:StyleID='C'><Data ss:Type='String'></Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>10:49:13.179</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>JRU-LOGGING.result (from OBU)</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>JRU logging result (File name: '284_test.jru', Data size: 512, Sequence number: 4, Complete: no)</Data></Cell>
+        <Cell ss:StyleID='A'><Data ss:Type='String'>LogName=284_test.jru Data=l të në ñë në hë në në hë në hë në hë në hë në hë hë në hë në hë në në hë hë në hë në hë hë hë në hë</Data></Cell>
+        <Cell ss:StyleID='C'><Data ss:Type='String'></Data></Cell>
+      </Row>
+
+      <!-- Add more rows as needed -->
+    </Table>
+  </Worksheet>
+</Workbook>
