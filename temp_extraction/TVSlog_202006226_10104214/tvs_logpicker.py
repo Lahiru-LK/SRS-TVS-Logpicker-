@@ -34,4 +34,23 @@ def parse_xml(xml_file):
         exit(1)
 
 
-#testing run
+
+def encode_binary_data(xml_content):
+    # Use regular expression to find binary data inside Data elements
+    pattern = r"<Data ss:Type='String'>\[(.*?)\]</Data>"
+    matches = re.findall(pattern, xml_content, re.DOTALL)
+
+    # Encode binary data as base64
+    for match in matches:
+        encoded_data = base64.b64encode(match.encode()).decode()
+        xml_content = xml_content.replace(f"<Data ss:Type='String'>[{match}]</Data>", f"<Data ss:Type='String'>{encoded_data}</Data>")
+
+    return xml_content
+
+# Read XML file content with explicit encoding
+with open("F:\\GALLERY\\Fiverr\\Order Project\\python\\01\\temp_extraction\\TVSlog_202006226_10104214\\TestScenario.xml", "r", encoding="utf-8") as xml_file:
+
+    xml_content = xml_file.read()
+
+# Encode binary data and replace in the XML content
+encoded_xml_content = encode_binary_data(xml_content)
