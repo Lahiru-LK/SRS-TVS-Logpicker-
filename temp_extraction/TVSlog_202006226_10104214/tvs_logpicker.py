@@ -54,3 +54,41 @@ with open("F:\\GALLERY\\Fiverr\\Order Project\\python\\01\\temp_extraction\\TVSl
 
 # Encode binary data and replace in the XML content
 encoded_xml_content = encode_binary_data(xml_content)
+
+
+
+
+def check_log_entries(log_file_path, log_entries, display=False):
+    try:
+        with open(log_file_path, 'r') as log_file:
+            log_content = log_file.read()
+
+            # Handle the case where log_entries is empty
+            if not log_entries:
+                print(f"Warning: Log entries list is empty for {log_file_path}. Skipping entry check.")
+                return False
+
+            for entry in log_entries:
+                if entry in log_content:
+                    return True
+    except Exception as e:
+        print(f"Error checking log entries in {log_file_path}: {str(e)}")
+        return False
+
+    return False
+
+
+def extract_files_from_archive(archive_path):
+    extracted_files = []
+
+    try:
+        with tarfile.open(archive_path, 'r:gz') as tar:
+            # Extract the contents of the archive
+            tar.extractall(path=temporary_extraction_directory)
+            extracted_files = [os.path.join(temporary_extraction_directory, extracted_file) for extracted_file in os.listdir(temporary_extraction_directory)]
+    except tarfile.ReadError:
+        print(f"Error: {archive_path} is not a valid gzip-compressed tar archive.")
+    except Exception as e:
+        print(f"Error extracting files from archive {archive_path}: {str(e)}")
+
+    return extracted_files
