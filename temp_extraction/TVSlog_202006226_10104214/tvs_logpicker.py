@@ -92,3 +92,42 @@ def extract_files_from_archive(archive_path):
         print(f"Error extracting files from archive {archive_path}: {str(e)}")
 
     return extracted_files
+
+def find_matching_archive(logroot, expected_timestamp):
+    matching_logs = []
+
+    # Iterate through archives in the root directory
+    for file in os.listdir(logroot):
+        log_file_path = os.path.join(logroot, file)
+
+        # Check if the file is a tar.gz archive
+        if file.endswith(".tar.gz"):
+            extracted_files = extract_files_from_archive(log_file_path)
+            # Check each extracted file for relevant log entries
+            for extracted_file_path in extracted_files:
+                if check_log_entries(extracted_file_path, expected_timestamp):
+                    display_log_file(extracted_file_path)
+                    matching_logs.append((log_file_path, extracted_file_path))
+
+    if not matching_logs:
+        # No match found in the root directory
+        print("Error: No matching archive found for the given timestamp.")
+
+    return matching_logs
+
+def display_log_files(output_directory, expected_timestamp):
+    log_files = []
+
+    # Find all .log files in the output directory
+    for root, dirs, files in os.walk(output_directory):
+        for file in files:
+            if file.endswith(".log"):
+                log_files.append(os.path.join(root, file))
+
+    if log_files:
+        print(f"\nLog files in the directory: {output_directory}\n")
+        for log_file in log_files:
+            print(f"{log_file}\n")
+    else:
+        print("No log files found in the directory.")
+
