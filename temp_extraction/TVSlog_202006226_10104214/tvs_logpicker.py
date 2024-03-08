@@ -131,3 +131,26 @@ def display_log_files(output_directory, expected_timestamp):
     else:
         print("No log files found in the directory.")
 
+
+def display_log_file(log_file_path):
+    try:
+        with open(log_file_path, 'r') as log_file:
+            print(log_file.read())
+    except Exception as e:
+        print(f"Error displaying content of log file: {str(e)}")
+
+def display_jru_files(output_directory, expected_timestamp):
+    jru_files = []
+
+    # Find all .jru files in the output directory
+    for root, dirs, files in os.walk(output_directory):
+        for file in files:
+            if file.endswith(".jru"):
+                jru_files.append(os.path.join(root, file))
+
+    if jru_files:
+        print(f"\nJRU files in the directory: {output_directory}\n")
+        for jru_file in jru_files:
+            print(f"{jru_file}\n")
+    else:
+        print("No JRU files found in the directory.")
